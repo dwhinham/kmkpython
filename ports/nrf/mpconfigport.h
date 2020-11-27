@@ -38,8 +38,8 @@
 #define MICROPY_PY_REVERSE_SPECIAL_METHODS       (1)
 #define MICROPY_PY_SYS_STDIO_BUFFER              (1)
 
-// 24kiB stack
-#define CIRCUITPY_DEFAULT_STACK_SIZE            (24 * 1024)
+// 9kiB stack
+#define CIRCUITPY_DEFAULT_STACK_SIZE            (9*1024)
 
 #ifdef NRF52840
 #define MICROPY_PY_SYS_PLATFORM "nRF52840"
