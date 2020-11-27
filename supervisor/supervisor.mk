@@ -150,7 +150,7 @@ endif
 
 # Preserve double quotes in these values by single-quoting them.
 
-USB_INTERFACE_NAME ?= "CircuitPython"
+USB_INTERFACE_NAME ?= "KMKPython"
 CFLAGS += -DUSB_INTERFACE_NAME='$(USB_INTERFACE_NAME)'
 
 ifneq ($(USB_VID),)
