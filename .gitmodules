@@ -194,3 +194,6 @@
 [submodule "frozen/Adafruit_CircuitPython_APDS9960"]
 	path = frozen/Adafruit_CircuitPython_APDS9960
 	url = https://github.com/adafruit/Adafruit_CircuitPython_APDS9960
+[submodule "frozen/Adafruit_CircuitPython_SSD1306"]
+	path = frozen/Adafruit_CircuitPython_SSD1306
+	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1306
