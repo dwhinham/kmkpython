@@ -197,3 +197,6 @@
 [submodule "frozen/Adafruit_CircuitPython_SSD1306"]
 	path = frozen/Adafruit_CircuitPython_SSD1306
 	url = https://github.com/adafruit/Adafruit_CircuitPython_SSD1306
+[submodule "frozen/kmk"]
+	path = frozen/kmk
+	url = https://github.com/KMKfw/kmk_firmware.git
