@@ -1,3 +1,37 @@
+KMKPython for 12-key Macropad
+=============================
+
+Custom build of KMKPython/KMK Firmware for Raspberry Pi Pico based on CircuitPython 7.0.0.
+
+To build:
+
+- ``git submodule update --init``
+- ``make -C mpy-cross``
+- ``make -C ports/raspberrypi BOARD=raspberry_pi_pico -j``
+
+To install:
+
+- Connect the Pico, ensure it's in bootloader mode (press the button) and copy ``ports/raspberrypi/build-raspberry_pi_pico/firmware.uf2`` to its mass storage device.
+- When the Pico reboots, copy ``boot.py``, ``kb.py``, and ``main.py`` from the ``macropad`` directory to the root of the mass storage device.
+- Delete ``code.py`` from the root of the mass storage device if it exists.
+- Disconnect/reconnect the Pico. F13-F24 should be output when the keys are pressed.
+
+Default key map:
+
++-----+-----+-----+-----+
+| F13 | F14 | F15 | F16 |
++-----+-----+-----+-----+
+| F17 | F18 | F19 | F20 |
++-----+-----+-----+-----+
+| F21 | F22 | F23 | F24 |
++-----+-----+-----+-----+
+
+To enable the mass storage device (for accessing the Python source/keymap) and serial port (for accessing the CircuitPython REPL), hold down F13 whilst connecting the macropad to the computer.
+
+To get to the Pico's bootloader, hold down F13 and F14 whilst connecting the macropad to the computer.
+
+``main.py`` contains the keymap. Refer to the `KMK Firmware documentation <https://github.com/KMKfw/kmk_firmware/blob/master/docs/Getting_Started.md>`_ to learn how to customize it.
+
 KMKPython
 =========
 
@@ -11,8 +45,8 @@ upstream bugs! We can be reached in the issue tracker on Github, or `on Matrix
 at #kmkfw:klar.sh <https://matrix.to/#/#kmkfw:klar.sh>`_. The rest of this
 README is left as was written by Adafruit and contributors upstream.
 
-Currently targeted upstream tag: `6.0.0
-<https://github.com/adafruit/circuitpython/tree/6.0.0>`_.
+Currently targeted upstream tag: `7.0.0
+<https://github.com/adafruit/circuitpython/tree/7.0.0>`_.
 
 CircuitPython
 =============
